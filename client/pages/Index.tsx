@@ -89,7 +89,7 @@ return;
 
 const role = userSnap.data().role;
 if (role === "student") navigate("/");
-else if (role === "counselor") navigate("/counseller");
+else if (role === "counselor") navigate("/counselor");
 else alert("Role not assigned. Contact admin.");
 };
 
@@ -121,7 +121,7 @@ alert("Invalid credentials");
 setLoading(false);
 };
 
-  // image rows (compact sizes)
+ 
   const row1: Img[] = [
     {
       src: "https://api.builder.io/api/v1/image/assets/TEMP/d1687c77cac552eab64c4fb076822eb6731b2890?width=450",
@@ -181,7 +181,7 @@ setLoading(false);
 
   return (
     <div className="w-full overflow-x-hidden">
-
+      {/* HERO with background image rows */}
       <section className="relative min-h-[900px] bg-white">
         <div className="absolute inset-0 overflow-hidden -z-0">
           <ImageRow imgs={row1} rowIdx={0} />
@@ -189,13 +189,13 @@ setLoading(false);
           <ImageRow imgs={row3} rowIdx={20} />
         </div>
 
-      
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black/55 z-10"></div>
 
       
         <Header />
 
-
+        {/* Hero content */}
         <motion.div
           className="relative z-20 container mx-auto px-4 py-12 lg:py-20"
           initial="hidden"
@@ -278,7 +278,7 @@ setLoading(false);
         </motion.div>
       </section>
 
-
+      {/* Three Pillars */}
       <div className="bg-white py-4">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-4 text-center">
@@ -297,7 +297,7 @@ setLoading(false);
         </div>
       </div>
 
-
+ 
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4 flex flex-row md:flex-row items-center justify-center gap-12 text-center md:text-left">
           <img
@@ -318,7 +318,7 @@ setLoading(false);
         </div>
       </section>
 
-
+      
       <section className="py-16 bg-beacon-beige rounded-[50px] mx-4 my-5">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-5xl font-lato font-bold text-center text-gray-700 mb-12">
@@ -326,7 +326,7 @@ setLoading(false);
           </h2>
 
           <div className="grid lg:grid-cols-3 gap-8 items-center">
-          
+   
             <div className="relative flex justify-center">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/1a10fc8516bd01697a4e42f2736ea683394320cc?width=788"
@@ -348,7 +348,7 @@ setLoading(false);
               </svg>
             </div>
 
-     
+            {/* middle phone mockup */}
             <div className="relative bg-gray-300 rounded-[50px] border-8 border-black p-8 text-center w-64 h-[420px] md:w-72 md:h-[520px] mx-auto flex flex-col justify-between shadow-xl">
               <div className="absolute top-4 left-1/2 -translate-x-1/2 w-4 h-4 bg-black rounded-full"></div>
 
@@ -362,7 +362,7 @@ setLoading(false);
               </div>
             </div>
 
-        
+            {/* right - avatar + speech bubble */}
             <div className="text-center lg:text-left">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/81c0273149afd0e9dd3de35548dfb1cc9afcbb06?width=560"
@@ -379,7 +379,7 @@ setLoading(false);
         </div>
       </section>
 
-  
+      {/* Mental Stress Tagline */}
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-6xl md:text-6xl font-lato font-bold">
@@ -391,7 +391,7 @@ setLoading(false);
         </div>
       </section>
 
-   
+      {/* Online Counseling */}
       <section className="py-16 bg-beacon-pink rounded-[80px] mx-4 my-16">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -429,7 +429,7 @@ setLoading(false);
         </div>
       </section>
 
-   
+      {/* Beacon Helps Section */}
       <section className="py-16 bg-beacon-beige text-center rounded-[80px] m-4">
         <div className="container mx-auto px-4">
           <motion.h2
@@ -442,6 +442,7 @@ setLoading(false);
             Explore Our <span className="text-[#0653A1]">Mindful Cards</span>
           </motion.h2>
 
+          {/* 🟦 Stylish Button */}
           <motion.button
             onClick={() => setShowCards(!showCards)}
             className="mb-10 bg-[#0653A1] text-white px-10 py-3 rounded-full text-lg font-semibold shadow-md hover:shadow-lg hover:bg-[#0b62c0] transition-all duration-300"
@@ -451,7 +452,7 @@ setLoading(false);
             {showCards ? "Hide Cards" : "Show Cards"}
           </motion.button>
 
-     
+          {/* 💳 Cards Section */}
           {showCards && (
             <motion.div
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center "
@@ -802,3 +803,6 @@ setLoading(false);
     </div>
   );
 }
+
+
+

@@ -8,7 +8,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Counseller from "./pages/counseller";
 // --- Page Imports (Ensure these paths are correct in your project) ---
 import Index from "./pages/Index";
-
+import Meditate from "./pages/Mediatate";
+import HowToMeditate from "./pages/HowTomeditate";
 import NotFound from "./pages/NotFound";
 import Signup from "./pages/Signup";
 import ThoughtDetox from "./pages/Calender";
@@ -45,6 +46,8 @@ const App = () => (
            <Route path="/moderate" element={<ModerateServices/>}/>
            <Route path="/severe" element={<SevereServices/>}/>
            <Route path="/counseller" element={<Counseller/>}/>
+              <Route path="/meditate" element={<Meditate/>}/>
+ <Route path="/hm" element={<HowToMeditate/>}/>
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
